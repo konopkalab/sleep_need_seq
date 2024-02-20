@@ -7,3 +7,5 @@ Code for snRNA-seq data analysis for sleep_need manuscript
 [`B. REMOVE AMBIENT RNA`](B_CellBender.md)
 
 [`C. REMOVE DOUBLETS`](C_DoubletFinder.md)
+
+[`D. CLUSTERING, ANNOTATION & DEG ANALYSIS`](D_Seurat.md)
