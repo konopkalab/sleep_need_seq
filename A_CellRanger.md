@@ -1,6 +1,7 @@
 ## CellRanger
 
 ### cellranger mkfastq
+```
 module load cellranger/3.0.2
 module load bcl2fastq/2.19.1
 
@@ -11,8 +12,10 @@ cellranger mkfastq --id=SLEEPSEQ_FASTQ \
                    --ignore-dual-index
 
 echo "DONE"
+```
 
 *SampleSheet.csv*
+```
 Lane,Sample,Index
 3,A1,SI-GA-A1
 3,A2,SI-GA-A2
@@ -22,10 +25,11 @@ Lane,Sample,Index
 3,A6,SI-GA-A6
 3,A7,SI-GA-A7
 3,A8,SI-GA-A8
-
+```
 
 
 ### fastqc
+```
 module load fastqc/0.11.5
 
 FQDIR="SLEEPSEQ_FASTQ"
@@ -42,9 +46,10 @@ for mylib in `ls`
  done
 
 echo "DONE"
-
+```
 
 ### cellranger count
+```
 module load cellranger/3.0.2
 
 echo "START"
@@ -82,4 +87,4 @@ fastqc /endosome/work/Neuroinformatics_Core/s175848/DATA_BACKUP_AK/SLEEP_SNRNASE
 cellranger count --id=A8 --fastqs=/endosome/work/Neuroinformatics_Core/s175848/DATA_BACKUP_AK/SLEEP_SNRNASEQ/01_DEMUX/SLEEPSEQ_DEC2020/outs/fastq_path/HMHJ2DSXY/ --sample=A8 --transcriptome=/endosome/work/Neuroinformatics_Core/s175848/DATA_BACKUP_AK/RESOURCES/MM10_GRCm38p6_GENCODEvM17_PREMRNA_CELLRANGER --expect-cells=10000
 
 echo "DONE"
-
+```
